@@ -87,4 +87,7 @@ class Solution {
         return dummy.next;
     }
 }
+/*
+    新建一个头节点，然后对这两个list挨个加，new到新的list中
+*/
 // @lc code=end

@@ -63,20 +63,22 @@ import java.util.HashMap;
 // @lc code=start
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int res[] = new int[2];
         int length = nums.length;
-        for(int i=0;i<length;i++){
-            if(map.get(nums[i])==null){
-                map.put(target-nums[i], i);
-            }else{
-                res[0]=map.get(nums[i]);
-                res[1]=i;
+        for (int i = 0; i < length; i++) {
+            if (map.get(nums[i]) == null) {
+                map.put(target - nums[i], i);
+            } else {
+                res[0] = map.get(nums[i]);
+                res[1] = i;
                 break;
             }
         }
         return res;
     }
 }
+/* 
+ 通过一个map存储target - nums[i] 的值，判断是否存在
+*/
 // @lc code=end
-
